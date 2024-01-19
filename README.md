@@ -1,10 +1,26 @@
 # RouttingApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.10.
+This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.0.7. 
 
-## Development server
+It contains the guided practices developed in the  [Angular Routing](https://deloittedevelopment.udemy.com/course/angular-router-course/) course.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Install the  project
+
+To install the project, it is necessary to follow the following steps.
+
+    git clone https://github.com/jrlara1127/AngularRouting.git
+    cd angularAcademyProject
+    git checkout main
+    git pull origin excercise2
+    npm install
+
+To raise the  backend application is necessary to run the following command:
+
+    npm run server
+
+To run the project it will only be necessary to run the following command.
+
+    npm start 
 
 ## Code scaffolding
 
