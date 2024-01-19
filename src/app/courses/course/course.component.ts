@@ -1,5 +1,7 @@
-import {Component, OnInit} from '@angular/core';
+
+import { Component, OnInit } from '@angular/core';
 import {Course} from '../model/course';
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -9,19 +11,28 @@ import {Course} from '../model/course';
 })
 export class CourseComponent implements OnInit {
 
-    course: Course;
+    course!: Course;
 
-    couponCode: string;
+    couponCode!: string | null;
 
 
-    constructor() {
+    constructor(private route:ActivatedRoute) {
 
 
     }
 
     ngOnInit() {
 
+        this.course = this.route.snapshot.data["course"];
+  
+        this.couponCode = this.route.snapshot.queryParamMap.get("couponCode");
 
+
+    }
+
+
+    confirmExit() {
+        return confirm(`Are you sure you want to exit ${this.course.description}?`)
     }
 
 

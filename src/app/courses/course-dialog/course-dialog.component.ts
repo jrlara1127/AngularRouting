@@ -1,11 +1,11 @@
-import { Component, Inject} from '@angular/core';
+
 import { MAT_DIALOG_DATA, MatDialogRef } from "@angular/material/dialog";
 import {Course} from "../model/course";
 import {FormBuilder, Validators, FormGroup} from "@angular/forms";
-import * as moment from 'moment';
 import {CoursesService} from "../services/courses.service";
 import {LoadingService} from "../../shared/loading/loading.service";
 import {MessagesService} from "../../shared/messages/messages.service";
+import { Component, Inject } from "@angular/core";
 
 
 @Component({
@@ -34,7 +34,7 @@ export class CourseDialogComponent {
         this.form = fb.group({
             description: [course.description, Validators.required],
             category: [course.category, Validators.required],
-            releasedAt: [moment(), Validators.required],
+            releasedAt: [new Date, Validators.required],
             longDescription: [course.longDescription,Validators.required]
         });
 

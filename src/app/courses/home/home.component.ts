@@ -1,9 +1,10 @@
-import {Component, OnInit} from '@angular/core';
+
 import {Course, sortCoursesBySeqNo} from '../model/course';
 import {Observable} from 'rxjs';
 import {CoursesService} from "../services/courses.service";
 import {map} from "rxjs/operators";
 import {LoadingService} from "../../shared/loading/loading.service";
+import { Component, OnInit } from '@angular/core';
 
 
 @Component({
@@ -13,9 +14,9 @@ import {LoadingService} from "../../shared/loading/loading.service";
 })
 export class HomeComponent implements OnInit {
 
-  beginnerCourses$: Observable<Course[]>;
+  beginnerCourses$!: Observable<Course[]>;
 
-  advancedCourses$: Observable<Course[]>;
+  advancedCourses$!: Observable<Course[]>;
 
   constructor(
     private courses: CoursesService,

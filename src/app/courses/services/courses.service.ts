@@ -29,7 +29,7 @@ export class CoursesService {
             }
         })
             .pipe(
-                map(res => res["payload"]),
+                map((res: any) => res["payload"]),
                 shareReplay()
             );
     }
@@ -37,7 +37,7 @@ export class CoursesService {
     loadAllCourses(): Observable<Course[]> {
         return this.http.get<Course[]>("/api/courses")
             .pipe(
-                map(res => res["payload"]),
+                map((res: any) => res["payload"]),
                 shareReplay()
             );
     }
@@ -59,7 +59,7 @@ export class CoursesService {
             }
         })
             .pipe(
-                map(res => res["payload"]),
+                map((res:any) => res["payload"]),
                 shareReplay()
             );
     }
